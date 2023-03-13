@@ -3,7 +3,7 @@
 ## Brief
 This is a [Next.js](https://nextjs.org/) project for the development of online Personal Portfolio of Bellie Joe Jandusay, the owner of this repository.
 
-## Tools Used
+## Frameworks and Libraries Used
 - NextJS
 - [NextUI](https://nextui.org/)
 

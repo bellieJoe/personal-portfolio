@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project for the development of online P
 
 ## Frameworks and Libraries Used
 - NextJS
-- [NextUI](https://nextui.org/)
+- [Reactstrap](https://reactstrap.github.io)
 
 ## Getting Started
 

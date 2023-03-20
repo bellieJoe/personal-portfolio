@@ -5,7 +5,7 @@ export default function Hero (){
     return (
         <>
             <Container>
-                <Text style={{ font: theme?.fonts.mono }}>
+                <Text style={{ font: theme?.fonts.main }}>
                     BEllie Joe
                 </Text>
             </Container>

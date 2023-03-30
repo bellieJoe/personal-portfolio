@@ -1,9 +1,9 @@
-import TopNavigation from "./topNavigation";
+import Navbar from "./Navbar/Navbar";
 
 export default function Layout({ children }){
     return (
         <>
-            <TopNavigation />
+            <Navbar />
             <main>{children}</main>
         </>
     )

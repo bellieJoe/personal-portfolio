@@ -20,22 +20,16 @@ function LinkItem(props){
     )
 }
 
-function Links(){
-    return (
-        <>
-        <ul>
-            <LinkItem text="Sample Text" />
-        </ul>
-        </>
-    )
-}
-
 export default function Navbar(){
     return (
         <>
         <div className="navbar">
             <Brand />
-            <Links />
+            <ul>
+                <LinkItem text="Sample Text" />
+                <LinkItem text="Sample Text" />
+                <LinkItem text="Sample Text" />
+            </ul>
         </div>
         </>
     )

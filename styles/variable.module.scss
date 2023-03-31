@@ -2,8 +2,15 @@
 
 $primary-font: "Orbitron";
 $sample-color : black;
+$background-color: rgb(20, 20, 20);
+$light-color: rgb(214, 214, 214);
+
+@mixin container {
+    padding: 0rem 5rem;
+}
 
 :export {
     sampleColor: $sample-color;
     primaryFont: $primary-font;
+    $backgroundColor : $background-color;
 }

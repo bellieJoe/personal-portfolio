@@ -1,0 +1,8 @@
+@import "../../styles/variable.module.scss";
+
+.Interest{
+    @include container;    
+    background-color: $background-color;
+    color: $light-color;
+    min-height: 500px; //temporary
+}

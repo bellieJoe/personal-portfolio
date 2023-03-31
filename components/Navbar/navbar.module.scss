@@ -1,0 +1,34 @@
+@import '../../styles/variable.module.scss';
+
+.navbar{
+    @include container;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: $background-color;
+    .navbarBrand{
+        padding: .5rem;
+        align-self: center;
+        *{
+            font-family: $primary-font;
+            font-weight: 900;
+            color: $light-color;
+            margin: 0rem;
+        }
+    }
+    ul{
+        padding: .5rem;
+        margin: 0rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        li{
+            list-style: none;
+            a{
+                font-family: $primary-font;
+                color: $light-color;
+                text-decoration: none;
+            }
+        }
+    }
+}

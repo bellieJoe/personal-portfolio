@@ -1,0 +1,11 @@
+@import "../../styles/variable.module.scss";
+
+.Hero{
+    @include container;
+    font-family: $primary-font;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 500px; //temporary
+    // background-color: gray; //temporary
+}

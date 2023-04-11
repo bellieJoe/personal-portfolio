@@ -9,3 +9,26 @@
             color: white;
         }
 }
+.Path{
+    font-family: $primary-font;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    align-items: center;
+    .companyName, .role {
+        font-family: $secondary-font;
+    }
+    .role, .companyName{
+        margin-bottom: 0px;
+    }
+    .scope{
+        color: #FFC908;
+        font-weight: bold;
+    }
+}
+.PathCard{
+    padding: 1rem;
+    margin: 2rem 0rem;
+    font-family: $secondary-font;
+    background-color: gray;
+    border-radius: .5rem;
+}

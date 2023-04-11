@@ -1,0 +1,11 @@
+@import "../../styles/variable.module.scss";
+.Experience{
+        @include container;    
+        @include section;
+        background-color: $background-color;
+        color: $light-color;
+        .section_header{
+            @include section-header;
+            color: white;
+        }
+}

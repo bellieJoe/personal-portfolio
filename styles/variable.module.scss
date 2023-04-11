@@ -1,12 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 $primary-font: "Orbitron";
+$secondary-font: "Titillium Web";
 $sample-color : black;
 $background-color: rgb(20, 20, 20);
+$background-color-tint: rgb(26, 26, 26);
 $light-color: rgb(214, 214, 214);
 
 @mixin container {
     padding: 0rem 5rem;
+}
+
+@mixin section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@mixin section-header{
+    // padding-top: 4rem;
+    // margin-bottom: 2rem;
+    font-family: $primary-font;
+    font-weight: bolder;
 }
 
 :export {

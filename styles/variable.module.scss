@@ -3,12 +3,12 @@
 $primary-font: "Orbitron";
 $secondary-font: "Titillium Web";
 $sample-color : black;
-$background-color: rgb(20, 20, 20);
+$background-color: #2E2E2E;
 $background-color-tint: rgb(26, 26, 26);
 $light-color: rgb(214, 214, 214);
 
 @mixin container {
-    padding: 0rem 5rem;
+    padding: 0rem 10rem;
 }
 
 @mixin section {
@@ -21,6 +21,7 @@ $light-color: rgb(214, 214, 214);
     // margin-bottom: 2rem;
     font-family: $primary-font;
     font-weight: bolder;
+    font-size: 3.5rem;
 }
 
 :export {

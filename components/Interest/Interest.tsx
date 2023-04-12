@@ -1,3 +1,4 @@
+import SectionHeader from "../SectionHeader/SectionHeader";
 import styles from "./Interest.module.scss";
 
 export default function Interest(){
@@ -23,9 +24,7 @@ export default function Interest(){
     return (
         <>
             <div className={styles.Interest}>
-                <h1 className={styles.section_header}>
-                    Interest
-                </h1>
+                <SectionHeader text="Interest" />
                 {
                     contents.map(content => (
                         <div className={styles.card}>

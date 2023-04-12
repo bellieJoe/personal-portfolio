@@ -4,10 +4,10 @@
         @include section;
         background-color: $background-color;
         color: $light-color;
-        .section_header{
-            @include section-header;
-            color: white;
-        }
+        // .section_header {
+        //     @include section-header;
+        //     color: white;
+        // }
 }
 .Path{
     font-family: $primary-font;
@@ -29,6 +29,7 @@
     padding: 1rem;
     margin: 2rem 0rem;
     font-family: $secondary-font;
-    background-color: gray;
+    background-image: linear-gradient(45deg, #383838, #4B473F);
     border-radius: .5rem;
+    box-shadow: -23px 30px 43px 0px rgba(0, 0, 0, 0.45), 50px -29px 43px 0px rgba(237, 237, 237, 0.02);
 }

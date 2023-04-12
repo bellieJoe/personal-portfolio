@@ -1,3 +1,4 @@
+import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Experience.module.scss"
 
 function PathCard(props){
@@ -48,10 +49,8 @@ export default function Experience(){
     ]
 
     return (
-        <div className={styles.Experience}>
-            <h1 className={styles.section_header}>
-                Experience
-            </h1>
+        <div className={styles.Experience} id="experience">
+            <SectionHeader text="Experiences" />
             {
                 experiences.map(exp => (
                     <Path scope={exp.scope}

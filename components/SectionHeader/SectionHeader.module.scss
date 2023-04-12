@@ -1,0 +1,32 @@
+@import "../../styles/variable.module.scss";
+
+@keyframes header_glitch {
+    1% {
+        box-shadow: none;
+    }
+    2%{
+        color: rgb(207, 207, 207);
+    }
+    3%{
+        color: black;
+    }
+    4%{
+        color: white;
+    }
+    5% {
+        text-shadow: -4px 0rem rgb(0, 116, 62), 4px 0rem rgb(0, 0, 0);
+    }
+    6% {
+        text-shadow: 4px 0rem rgb(0, 0, 0), -4px 0rem rgb(81, 153, 135), 0px 2px rgb(81, 153, 135);
+    }
+    7% {
+        box-shadow: none;
+    }
+}
+
+.SectionHeader {
+    @include section-header;
+    color: white;
+    width: fit-content;
+    animation: header_glitch .4s ease .4s infinite alternate;
+}

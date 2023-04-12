@@ -24,9 +24,113 @@
     }
 }
 
+@keyframes glitch_before {
+    0%{
+        background-color: white;
+        top: 70%;
+        width: 20%;
+        right: 25%;
+    }
+    2%{
+        background-color: white;
+        top: 64%;
+        width: 2%;
+        right: 0%;
+    }
+    4%{
+        background-color: white;
+        top: 55%;
+        width: 7%;
+        right: 30%;
+    }
+    6%{
+        background-color: white;
+        top: 55%;
+        width: 10%;
+        right: 0%;
+    }
+    8% {
+        background-color: white;
+        top: 60%;
+        width: 6%;
+        right: 100%;
+    }
+    10% {
+        background-color: white;
+        top: 50%;
+        left: 2%;
+        width: 10%
+    }
+}
+
+@keyframes glitch_after {
+    0%{
+        background-color: white;
+        top: 30%;
+        width: 20%;
+        right: 80%;
+    }
+    2%{
+        background-color: white;
+        top: 70%;
+        width: 20%;
+        right: 10%;
+    }
+    4%{
+        background-color: black;
+        top: 0%;
+        width: 7%;
+        right: 0%;
+    }
+    6%{
+        background-color: black;
+        top: 75%;
+        width: 15%;
+        right: 10%;
+    }
+    8% {
+        background-color: black;
+        top: 30%;
+        width: 50%;
+        right: 0%;
+    }
+    10% {
+        background-color: black;
+        top: 50%;
+        left: 2%;
+        width: 10%;
+        height: 20%
+    }
+}
+
 .SectionHeader {
-    @include section-header;
-    color: white;
-    width: fit-content;
-    animation: header_glitch .4s ease .4s infinite alternate;
+    h1{
+        @include section-header;
+        position: relative;
+        color: white;
+        width: fit-content;
+        animation: header_glitch .4s ease .4s infinite alternate;
+        &::before{
+            content: "";
+            background-color: none;
+            position: absolute;
+            top: 70%;
+            right: 40%;
+            width: 2%;
+            height: 5%;
+            mix-blend-mode: difference;
+            animation: glitch_before .2s ease-out .4s alternate infinite;
+        }
+        &::after{
+            content: "";
+            background-color: none;
+            position: absolute;
+            top: 70%;
+            right: 40%;
+            width: 2%;
+            height: 5%;
+            mix-blend-mode: difference;
+            animation: glitch_after .2s ease-out .4s alternate infinite;
+        }
+    }
 }

@@ -7,17 +7,17 @@ export default function Navbar(){
         <>
         <div className={styles.navbar}>
             <div className={styles.navbarBrand}>
-                <h3 >BJ</h3>
+                <h3 ><a href="#hero">BJ</a></h3>
             </div>
             <ul>
                 <li>
-                    <a href="">Sample</a>
+                    <a href="#interest">Interest</a>
                 </li>
                 <li>
-                    <a href="">Sample</a>
+                    <a href="#experiences">Experiences</a>
                 </li>
                 <li>
-                    <a href="">Sample</a>
+                    <a href="">Stacks</a>
                 </li>
             </ul>
         </div>

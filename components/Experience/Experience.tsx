@@ -49,7 +49,7 @@ export default function Experience(){
     ]
 
     return (
-        <div className={styles.Experience} id="experience">
+        <div className={styles.Experience} id="experiences">
             <SectionHeader text="Experiences" />
             {
                 experiences.map(exp => (

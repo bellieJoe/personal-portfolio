@@ -23,7 +23,7 @@ export default function Interest(){
 
     return (
         <>
-            <div className={styles.Interest}>
+            <div className={styles.Interest} id="interest">
                 <SectionHeader text="Interest" />
                 {
                     contents.map(content => (

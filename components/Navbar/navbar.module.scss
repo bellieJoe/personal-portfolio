@@ -5,6 +5,8 @@
     display: grid;
     grid-template-columns: auto auto;
     background-color: $background-color;
+    position: sticky;
+    top: 0;
     .navbarBrand{
         padding: .5rem;
         align-self: center;

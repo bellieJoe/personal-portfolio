@@ -1,5 +1,6 @@
 @import "../../styles/variable.module.scss";
 
+
 .Interest{
     @include container;    
     @include section;
@@ -26,6 +27,9 @@
                 transform: scale(1.08);
                 opacity: .7;
             }
+            .card_content p{
+                text-shadow: .5rem 0rem 5px $background-color-tint;
+            }
         }
         .card_img{
             position: absolute;
@@ -48,6 +52,7 @@
             p{
                 // z-index: 2 !important;
                 font-family: $secondary-font;
+                letter-spacing: 1px;
             }
 
         }

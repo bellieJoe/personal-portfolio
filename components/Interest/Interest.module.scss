@@ -12,17 +12,42 @@
     }
     .card{
         font-family: $primary-font;
-        padding: 2rem;
-        margin: 1rem 0rem;
+        margin: 2rem 0rem;
         background-color: $background-color-tint;
         border-radius: .5rem;
-        .card_header{
-
+        position: relative;
+        overflow: hidden;
+        transition-duration: .4s;
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        &:hover{
+            box-shadow: -.5rem .5rem rgb(31, 31, 31);
+            .card_img img{
+                transform: scale(1.08);
+                opacity: .7;
+            }
+        }
+        .card_img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 600px;
+            img{
+                background: linear-gradient(to right, rgba(77, 8, 8, 0), $background-color-tint);
+                transition-duration: .4s;
+                width: 100%;
+                height: auto;
+                mix-blend-mode: color-dodge;
+                opacity: .3;
+            }
         }
         .card_content{
+            padding: 2rem;
+            background: $background-color-tint;
+            max-width: 600px;
             p{
+                // z-index: 2 !important;
                 font-family: $secondary-font;
-                max-width: 700px;
             }
 
         }

@@ -1,0 +1,14 @@
+body::-webkit-scrollbar {
+    background-color: white;
+    width: 5px;
+    border-radius: 1rem;
+    padding: 1rem 0rem;
+    transition: .4s;
+}
+body::-webkit-scrollbar:hover {
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
+    border-radius: 1rem;
+}

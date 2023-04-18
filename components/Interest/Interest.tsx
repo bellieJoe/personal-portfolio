@@ -4,6 +4,7 @@ import ui_ux_bg from "../../assets/image/ui_ux_bg.jpg";
 import web_dev_bg from "../../assets/image/web_dev_bg.jpg";
 import mob_dev_bg from "../../assets/image/mob_dev_bg.jpg";
 import grap_des_bg from "../../assets/image/grap_des_bg.jpg";
+import {motion} from "framer-motion"
 
 export default function Interest(){
     const contents = [
@@ -36,20 +37,20 @@ export default function Interest(){
                 <div className={styles.cards}>
                 {
                     contents.map(content => (
-                        <div className="">
+                        <motion.div className="" whileHover={
+                            {
+                                // width: '400px'
+                                scale: 1.1
+                            }
+                            }>
                             <div className={styles.card}>
                                 <div className={styles.card_content}>
                                     <h3 className={styles.card_header}>{content.title}</h3>
                                     <p>{content.content}</p>
+                                    <a href="">See My Works</a>
                                 </div>
-                                    {/* <div className={styles.card_img}>
-                                        <div className={styles.img_container}>
-
-                                        <img src={content.img.src} alt="My Image" />
-                                        </div>
-                                    </div> */}
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
                 </div>

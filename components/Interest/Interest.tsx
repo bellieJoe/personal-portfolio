@@ -37,16 +37,16 @@ export default function Interest(){
                     contents.map(content => (
                         <div className="">
                             <div className={styles.card}>
-                                    <div className={styles.card_content}>
-                                        <h3 className={styles.card_header}>{content.title}</h3>
-                                        <p>{content.content}</p>
-                                    </div>
-                                    <div className={styles.card_img}>
+                                <div className={styles.card_content}>
+                                    <h3 className={styles.card_header}>{content.title}</h3>
+                                    <p>{content.content}</p>
+                                </div>
+                                    {/* <div className={styles.card_img}>
                                         <div className={styles.img_container}>
 
                                         <img src={content.img.src} alt="My Image" />
                                         </div>
-                                    </div>
+                                    </div> */}
                             </div>
                         </div>
                     ))

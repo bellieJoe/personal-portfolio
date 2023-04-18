@@ -1,0 +1,12 @@
+.Test{
+    .box{
+        background: linear-gradient(to right, rgb(17, 209, 120), rgb(74, 164, 216));
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        // border-radius: .5rem;
+        img{
+            position: relative;
+        }
+    }
+}

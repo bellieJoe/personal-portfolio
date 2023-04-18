@@ -33,6 +33,7 @@ export default function Interest(){
         <>
             <div className={styles.Interest} id="interest">
                 <SectionHeader text="Interest" />
+                <div className={styles.cards}>
                 {
                     contents.map(content => (
                         <div className="">
@@ -51,6 +52,7 @@ export default function Interest(){
                         </div>
                     ))
                 }
+                </div>
             </div>
         </>
     )

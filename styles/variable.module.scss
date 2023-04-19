@@ -3,17 +3,42 @@
 $primary-font: "Orbitron";
 $secondary-font: "Titillium Web";
 $sample-color : black;
-$background-color: #2E2E2E;
-$background-color-tint: rgb(26, 26, 26);
-$light-color: rgb(214, 214, 214);
+
+$primary: rgb(0, 255, 157);
+$secondary: rgb(255, 251, 0);
+$light: white;
+$dark: black;
+
+$background-color-shadow: #0c0c0c;
+$background-color: #0c0c0c;
+$background-color-tint: #303634;
+
+$dark-color: rgb(2, 3, 46);
+$light-color: rgb(255, 255, 255);
 
 @mixin container {
-    padding: 0rem 10rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    overflow-x: hidden;
+    @media only screen and (max-width: 700px) {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    @media only screen and (max-width: 400px) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
 }
 
 @mixin section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 4rem ;
+    padding-bottom: 4rem ;
+    // @media only screen and (max-width: 700px) {
+    //     padding: 0rem 5rem ;
+    // }
+    // @media only screen and (max-width: 400px) {
+    //     padding: 0rem 2rem ;
+    // }
 }
 
 @mixin section-header{

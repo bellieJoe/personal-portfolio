@@ -10,22 +10,22 @@ export default function Interest(){
     const contents = [
         {
             title: "UI/UX Design",
-            content: "My talent for art and education in Information Technology have come together to allow me to create stunning UI/UX designs. I have honed my skills during my college years, and now I am able to apply them in real-world projects. With a deep understanding of both art and technology, I can create designs that are not only visually appealing but also intuitive and functional.",
+            content: "As a software developer, I'm passionate about exploring new ideas and designs for web and mobile applications. In addition to my technical skills, I also enjoy using my artistic abilities to create beautiful and stunning user interfaces based on my clients' preferences.",
             img: ui_ux_bg
         },
         {
-            title: "Full Strack Web Dev.",
+            title: "Full Stack Web Dev.",
             content: "I love the process of full-stack development, from server-side programming to front-end user interface design. Being able to create a seamless user experience through the development stack is what truly excites me about this field.",
             img: web_dev_bg
         },
         {
-            title: "Mobile Application Dev.",
-            content: "During college, I was introduced to mobile app development and quickly became fascinated by the possibilities it offered. My passion grew as we worked on our Capstone project and I realized how much I loved developing mobile apps. Since then, I've been on a continuous journey to improve my skills and knowledge in the field. The Ionic Framework has been a valuable tool in this process, enabling me to build powerful and engaging mobile applications. I'm excited to keep exploring and growing in this dynamic field.",
+            title: "Mobile App Dev.",
+            content: "I've always been passionate about mobile application development and creating tools that people can use in their daily lives. However, I also aspire to explore the world of game development in the near future.",
             img: mob_dev_bg
         },
         {
             title: "Graphics Art/Design",
-            content: "Creating visually appealing art has been a passion of mine since I was young. As I grew older, my interest in graphics art and design grew, especially when I purchased my first graphics tablet. It quickly became my go-to tool whenever I wanted to unleash my creativity or feel productive during bouts of boredom. Over the years, this hobby has continued to bring me joy and satisfaction, and I'm always eager to explore new techniques and mediums to push the boundaries of what's possible.",
+            content: "Prior to software development, I had a strong interest in graphic design and art. Through my passion for art, I discovered my talent for design and I now use this skill to elevate my career as a software developer.",
             img: grap_des_bg
         }
     ]

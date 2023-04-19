@@ -31,6 +31,10 @@
                 font-family: $primary-font;
                 color: $light-color;
                 text-decoration: none;
+                transition: .4s;
+                &:hover{
+                    color: $primary;
+                }
             }
         }
     }

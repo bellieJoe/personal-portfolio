@@ -15,16 +15,24 @@ export default function Navbar(){
             <div className={styles.navbar}>
                 <div className={styles.navbarBrand}>
                     <h3>
-                        <IconButton className={styles.burger_menu} size="large">
+                        <IconButton className={styles.burger_menu} size="large" onClick={()=>setIsLinkVisible(!isLinkVisible)}>
                             <MenuIcon />
                         </IconButton>
-                        {/* <button className={styles.burger_menu} onClick={() =>  isLinkVisible ? setIsLinkVisible(false) : setIsLinkVisible(true)}>
-                            
-                        </button> */}
                         <a href="#hero">BJ</a>
                     </h3>
                 </div>
-                <motion.ul>
+                <motion.ul 
+                initial={{
+                    x: '-100vw'
+                }}
+                animate={{
+                    // type: 'spring',
+                    x: isLinkVisible ? 0 : '-100vw'
+                }}
+                transition={{
+                    ease : 'linear'
+                }}
+                >
                     <li>
                         <a href="#interest">Interest</a>
                     </li>
@@ -32,7 +40,7 @@ export default function Navbar(){
                         <a href="#experiences">Experiences</a>
                     </li>
                     <li>
-                        <a href="">Stacks</a>
+                        <a href="#">Stacks</a>
                     </li>
                 </motion.ul>
             </div>

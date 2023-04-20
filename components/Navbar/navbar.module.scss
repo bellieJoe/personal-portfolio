@@ -8,9 +8,8 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    @media only screen and (min-width: 400px) {
-        background: gray;
-        
+    .burger_menu{
+        width: fit-content;
     }
     .navbarBrand{
         background-color: $background-color;
@@ -24,10 +23,19 @@
         }
     }
     ul{
-        padding: .5rem;
+        padding: 4rem 2rem 0rem 2rem;
         margin: 0rem;
-        align-items: center;
-        justify-items: center;
+        z-index: -1;
+        // align-items: center;
+        // justify-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100vh !important;
+        background: $background-color;
+
+        @media only screen and (min-width: 400px) {
+        }
         li{
             list-style: none;
             a{

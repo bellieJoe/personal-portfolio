@@ -37,7 +37,7 @@ export default function Interest(){
                 <div className={styles.cards}>
                 {
                     contents.map(content => (
-                        <motion.div className="" whileHover={
+                        <motion.div key={content.title} className="" whileHover={
                             {
                                 // width: '400px'
                                 scale: 1.1

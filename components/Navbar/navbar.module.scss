@@ -2,14 +2,26 @@
 
 .navbar{
     @include container;
-    // display: grid;
-    // grid-template-columns: auto auto;
     background-color: $background-color;
     position: sticky;
     top: 0;
     z-index: 1;
-    .burger_menu{
-        width: fit-content;
+    @media only screen and (min-width: 700px) {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        ul{
+            position: inherit !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+            padding: 0rem !important;
+            height: fit-content !important;
+            li{
+                text-align: center;
+            }
+        }
+    }
+    @media only screen and (min-width: 1000px) {
     }
     .navbarBrand{
         background-color: $background-color;
@@ -26,16 +38,11 @@
         padding: 4rem 2rem 0rem 2rem;
         margin: 0rem;
         z-index: -1;
-        // align-items: center;
-        // justify-items: center;
         position: fixed;
         top: 0px;
         left: 0px;
-        height: 100vh !important;
+        height: 100vh ;
         background: $background-color;
-
-        @media only screen and (min-width: 400px) {
-        }
         li{
             list-style: none;
             a{

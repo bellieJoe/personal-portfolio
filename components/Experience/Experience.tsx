@@ -53,7 +53,7 @@ export default function Experience(){
             <SectionHeader text="Career Experience" />
             {
                 experiences.map(exp => (
-                    <Path scope={exp.scope}
+                    <Path key={exp.scope} scope={exp.scope}
                     companyName={exp.companyName}
                     role={exp.role}
                     description={exp.description}

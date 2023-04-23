@@ -8,8 +8,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useMediaQuery } from "@mui/material"
 
 export default function Navbar(){
-    const [isLinkVisible, setIsLinkVisible] = useState(false);
     const isMedium  = useMediaQuery('(min-width:700px)');
+    const [isLinkVisible, setIsLinkVisible] = useState(true);
 
     const linkVariant = {
         initial: !isMedium ? {

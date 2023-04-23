@@ -16,6 +16,7 @@
             display: grid;
             padding: 0rem !important;
             height: fit-content !important;
+            // width: inherit !important;
             li{
                 text-align: center;
             }
@@ -42,6 +43,7 @@
         top: 0px;
         left: 0px;
         height: 100vh ;
+        // width: 80vw;
         background: $background-color;
         li{
             list-style: none;

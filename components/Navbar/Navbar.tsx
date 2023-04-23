@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import variables from '../../styles/variable.module.scss'
 import styles from "./Navbar.module.scss";
 import { useState } from 'react';
 import { Button, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useMediaQuery } from "@mui/material"
 
 export default function Navbar(){
@@ -30,7 +31,17 @@ export default function Navbar(){
                         {
                             !isMedium && (
                                 <IconButton className={styles.burger_menu} size="large" onClick={()=>setIsLinkVisible(!isLinkVisible)} >
-                                    <MenuIcon />
+                                    <AnimatePresence >
+                                        <motion.div whileHover={{ 
+                                            rotateY: 90
+                                         }}
+                                        //  transition={{ ease: 'linear' }}
+                                        >
+                                        {
+                                            !isLinkVisible ? (<MenuIcon />) : (<ArrowBackIcon />)
+                                        }
+                                        </motion.div>
+                                    </AnimatePresence>
                                 </IconButton>
                             )
                         }

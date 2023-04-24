@@ -33,14 +33,14 @@ export default function Interest(){
     return (
         <>
             <div className={styles.Interest} id="interest">
-                <SectionHeader text="Interest" />
+                <SectionHeader text="What I do..." />
                 <div className={styles.cards}>
                 {
                     contents.map(content => (
                         <motion.div key={content.title} className="" whileHover={
                             {
                                 // width: '400px'
-                                scale: 1.1
+                                scale: 1.05
                             }
                             }>
                             <div className={styles.card}>

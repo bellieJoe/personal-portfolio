@@ -50,7 +50,7 @@ export default function Experience(){
 
     return (
         <div className={styles.Experience} id="experiences">
-            <SectionHeader text="Career Experience" />
+            <SectionHeader text="My Career Paths..." />
             {
                 experiences.map(exp => (
                     <Path key={exp.scope} scope={exp.scope}

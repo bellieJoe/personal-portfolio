@@ -12,26 +12,21 @@
         color: white;
     }
     .cards{
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
-        // display: grid;
-        // gap: 1rem;
+        @media only screen and (min-width: 1000px) {
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            gap: 1rem;
+            .card{
+                height: 100%;
+            }
+        }
     }
     .card{
         font-family: $primary-font;
         margin: 2rem 0rem;
         background-color: $background-color-tint;
         border-radius: .5rem;
-        // position: relative;
-        // overflow: hidden;
         transition-duration: .4s;
-        // color: $dark-color;
-        // background: linear-gradient(45deg, rgb(34, 34, 34), rgba(49, 49, 49, 0.959));
-        // max-width: 400px;
-        // max-height: 400px;
-        // height: 100%;
-        // box-shadow: -.5rem .5rem 1rem rgba(22, 22, 22, 0.589);
-        // box-shadow: .5rem -.5rem 1rem rgba(95, 95, 95, 0.082);
-        // border: 1px solid rgb(43, 43, 43);
         &:hover{
             // box-shadow: -.5rem .5rem $background-color-shadow;
             .card_img img{

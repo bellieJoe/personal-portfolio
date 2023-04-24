@@ -55,9 +55,9 @@ export default function Navbar(){
                     <li>
                         <a href="#experiences">Experiences</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="#">Stacks</a>
-                    </li>
+                    </li> */}
                 </motion.ul>
             </div>
         </>

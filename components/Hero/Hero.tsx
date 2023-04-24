@@ -3,7 +3,7 @@ import styles from "./Hero.module.scss";
 import {motion} from "framer-motion";
 
 export default function Hero(){
-  
+    console.log(styles)
     return (
         <>
             <div className={styles.Hero} id="hero">

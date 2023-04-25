@@ -9,7 +9,7 @@ export default function Hero(){
             <div className={styles.Hero} id="hero">
                 <div className="">
                     {/* <Test /> */}
-                    <h1 >Hi I'm Bellie Joe</h1>
+                    <h1 >Hi Im Bellie Joe</h1>
                     <h5>A Full Stack Developer</h5>
                 </div>
                 <div className="">

@@ -1,7 +1,7 @@
 import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Experience.module.scss"
 
-function PathCard(props){
+function PathCard(props : any){
     return (
         <div className={styles.PathCard}>
             <h4>{props.title}</h4>
@@ -10,7 +10,7 @@ function PathCard(props){
     )
 }
 
-function Path(props){
+function Path(props : any){
     return (
         <div className={styles.Path}>
             <div className="">

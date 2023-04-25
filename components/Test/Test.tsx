@@ -5,9 +5,9 @@ import { useCurrentState } from "@nextui-org/react"
 export default function Test(){
     return (
         <div className={styles.Test}>
-            <motion.div className={styles.box} >
+            {/* <motion.div className={styles.box} >
                 <img src={img_bg.src} alt="" width={300} />
-            </motion.div>
+            </motion.div> */}
             <button>Click</button>
         </div>
     )

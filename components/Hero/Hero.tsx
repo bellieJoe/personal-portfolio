@@ -7,9 +7,9 @@ export default function Hero(){
     return (
         <>
             <div className={styles.Hero} id="hero">
-                <motion.div animate={{ y: 0, opacity: 1}} initial={{y:'-2rem', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
+                <motion.div whileInView={{ y: 0, opacity: 1}} initial={{y:'2rem', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
                     <div className={styles.headText}>
-                        <h1>Building the future, one code at a time</h1>
+                        <h1>Building the future, one line of code at a time</h1>
                     </div>
                 </motion.div>
             </div>

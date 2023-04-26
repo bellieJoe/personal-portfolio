@@ -14,12 +14,9 @@
     }
     .cards{
         @media only screen and (min-width: 1000px) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr  ;
             display: grid;
-            gap: 2rem;
-            .card{
-                height: 100%;
-            }
+            gap: 0rem 2rem;
         }
     }
     .card{
@@ -27,40 +24,41 @@
         margin: 2rem 0rem;
         background-color: $background-color-tint;
         border-radius: .5rem;
-        // transition-duration: .4s;
-        &:hover{
-            // box-shadow: -.5rem .5rem $background-color-shadow;
-            .card_img img{
-                transform: scale(1.08);
-                opacity: .7;
-            }
-            .card_content p{
-                text-shadow: .5rem 0rem 5px $background-color-tint;
-            }
-        }
+        height: fit-content;
         .card_content{
             padding: 2rem;
             h3.card_header{
-                color: $primary;
+                color: $light;
+                font-weight: bolder;
+                font-size: xx-large;
             }
             p{
                 margin-top: 1rem;
-                font-family: arial;
                 text-align: justify;
                 max-height: 250px;
+                color: $light;
+                opacity: 100% !important;
+                font-weight: lighter;
                 font-family: $secondary-font;
             }
-            a{
-                text-decoration: none;
-                font-family: $secondary-font;
-                color: $primary;
-                padding: .5rem .8rem;
-                border-radius: .3rem .5rem;
-                border: 1px solid $primary;
-                margin: 0px;
-                // display: block;
-            }
+            // a{
+            //     text-decoration: none;
+            //     font-family: $secondary-font;
+            //     color: $primary;
+            //     padding: .5rem .8rem;
+            //     border-radius: .3rem .5rem;
+            //     border: 1px solid $primary;
+            //     margin: 0px;
+            // }
 
         }
+    }
+    a.works{
+        color: hsl(199, 98%, 52%);
+        font-size: x-large;
+        text-decoration: none;
+        display: block;
+        margin: 1rem auto;
+        width: fit-content;
     }
 }

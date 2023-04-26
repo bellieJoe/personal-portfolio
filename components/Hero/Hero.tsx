@@ -9,8 +9,10 @@ export default function Hero(){
             <div className={styles.Hero} id="hero">
                 <motion.div animate={{ x: 0, opacity: '100%'}} initial={{x:'-100%', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
                     {/* <Test /> */}
-                    <h1 >Hi Im Bellie Joe</h1>
-                    <h5>A Full Stack Developer</h5>
+                    <div className={styles.headText}>
+                        <h1><pre>Hi I'm BELLIE JOE</pre></h1>
+                    </div>
+                    <h5>I build software that solves real-world problems.</h5>
                 </motion.div>
                 <div className="">
                     

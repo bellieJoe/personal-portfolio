@@ -4,18 +4,36 @@
     @include container;
     font-family: $primary-font;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
     align-items: center;
-    min-height: 500px; //temporary
+    padding: 5rem 0rem;
+    min-height: 100vh; //temporary
     .headText{
         background-image: linear-gradient(45deg,  rgb(0, 126, 94),rgb(4, 194, 121));
         background-clip: text;
         color: transparent;
-        h1 pre{
+        h1 {
             font-family: $primary-font;
             font-weight: bolder;
             font-size: 4.5rem;
-            margin-bottom: 0px
+            margin: 0rem auto;
+            line-height: 4rem;
+            text-align: center;
+            max-width: 600px;
+            
+            &::before{
+                content: "<";
+                color: black;
+                // font-size: 7rem;
+                // top: 1rem;
+                // position: absolute;
+            }
+            &::after{
+                content: "/>";
+                color: black;
+                // font-size: 7rem;
+                // position: absolute;
+            }
         }
     }
     h5{

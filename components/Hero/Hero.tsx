@@ -7,16 +7,11 @@ export default function Hero(){
     return (
         <>
             <div className={styles.Hero} id="hero">
-                <motion.div animate={{ x: 0, opacity: '100%'}} initial={{x:'-100%', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
-                    {/* <Test /> */}
+                <motion.div animate={{ y: 0, opacity: 1}} initial={{y:'-2rem', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
                     <div className={styles.headText}>
-                        <h1><pre>Hi I'm BELLIE JOE</pre></h1>
+                        <h1>Building the future, one code at a time</h1>
                     </div>
-                    <h5>I build software that solves real-world problems.</h5>
                 </motion.div>
-                <div className="">
-                    
-                </div>
             </div>
         </>
     )

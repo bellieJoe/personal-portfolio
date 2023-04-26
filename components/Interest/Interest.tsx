@@ -52,7 +52,7 @@ export default function Interest(){
     return (
         <>
             <div className={styles.Interest} id="interest">
-                <SectionHeader text="What I do..." />
+                <SectionHeader text="What I do" />
                 <motion.div className={styles.cards} variants={cardsVariant} initial="hidden" whileInView="show" viewport={{margin: "-150px"}}>
                 {
                     contents.map(content => (

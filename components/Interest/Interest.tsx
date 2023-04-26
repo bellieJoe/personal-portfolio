@@ -4,7 +4,7 @@ import ui_ux_bg from "../../assets/image/ui_ux_bg.jpg";
 import web_dev_bg from "../../assets/image/web_dev_bg.jpg";
 import mob_dev_bg from "../../assets/image/mob_dev_bg.jpg";
 import grap_des_bg from "../../assets/image/grap_des_bg.jpg";
-import {motion} from "framer-motion"
+import {motion, AnimatePresence, Variants} from "framer-motion"
 
 export default function Interest(){
     const contents = [
@@ -30,30 +30,45 @@ export default function Interest(){
         }
     ]
 
+    const cardsVariant : Variants = {
+        hidden : {
+            opacity: 0,
+        },
+        show: {
+            opacity: 1,
+            
+            transition: {
+                type: "spring",
+                staggerChildren: .2
+            }
+        }
+    }
+
+    const cardVariant : Variants = {
+        hidden: { opacity: 0,  y: "4rem"},
+        show: { opacity: 1, y: 0, }
+    }
+
     return (
         <>
             <div className={styles.Interest} id="interest">
                 <SectionHeader text="What I do..." />
-                <div className={styles.cards}>
+                <motion.div className={styles.cards} variants={cardsVariant} initial="hidden" whileInView="show" viewport={{margin: "-150px"}}>
                 {
                     contents.map(content => (
-                        <motion.div key={content.title} className="" whileHover={
-                            {
-                                // width: '400px'
-                                scale: 1.05
-                            }
-                            }>
-                            <div className={styles.card}>
-                                <div className={styles.card_content}>
+                        <motion.div key={content.title}  variants={cardVariant}>
+                            <motion.div className={styles.card}
+                            >
+                                <div className={styles.card_content} >
                                     <h3 className={styles.card_header}>{content.title}</h3>
                                     <p>{content.content}</p>
                                     <a href="">See My Works</a>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     ))
                 }
-                </div>
+                </motion.div>
             </div>
         </>
     )

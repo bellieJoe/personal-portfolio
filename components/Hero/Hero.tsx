@@ -7,11 +7,11 @@ export default function Hero(){
     return (
         <>
             <div className={styles.Hero} id="hero">
-                <div className="">
+                <motion.div animate={{ x: 0, opacity: '100%'}} initial={{x:'-100%', opacity: 0}} transition={{duration: .3, ease: "easeOut"}}>
                     {/* <Test /> */}
                     <h1 >Hi Im Bellie Joe</h1>
                     <h5>A Full Stack Developer</h5>
-                </div>
+                </motion.div>
                 <div className="">
                     
                 </div>

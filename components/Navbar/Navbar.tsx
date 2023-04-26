@@ -8,8 +8,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useMediaQuery } from "@mui/material"
 
 export default function Navbar(){
-    const { scrollYProgress } = useScroll();
-    console.log(scrollYProgress)
     const isMedium  = useMediaQuery('(min-width:700px)');
     const [isLinkVisible, setIsLinkVisible] = useState(true);
 
@@ -37,7 +35,6 @@ export default function Navbar(){
                                         <motion.div whileHover={{ 
                                             rotateY: 90
                                          }}
-                                        //  transition={{ ease: 'linear' }}
                                         >
                                         {
                                             !isLinkVisible ? (<MenuIcon />) : (<ArrowBackIcon />)

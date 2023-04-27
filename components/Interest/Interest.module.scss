@@ -15,16 +15,18 @@
     .cards{
         @media only screen and (min-width: 1000px) {
             grid-template-columns: 1fr 1fr  ;
+            // grid-auto-rows: minmax(100px, auto);
             display: grid;
-            gap: 0rem 2rem;
+            gap: 2rem;
+            margin: 2rem 0rem;
         }
     }
     .card{
         font-family: $primary-font;
-        margin: 2rem 0rem;
+        // margin: 2rem 0rem;
         background-color: $background-color-tint;
         border-radius: .5rem;
-        height: fit-content;
+        height: 100%;
         .card_content{
             padding: 2rem;
             h3.card_header{

@@ -1,6 +1,7 @@
 import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Experience.module.scss"
 import {motion, Variants} from "framer-motion";
+import path from "path";
 
 function PathCard(props : any){
     return (
@@ -13,16 +14,58 @@ function PathCard(props : any){
 }
 
 function Path(props : any){
+    const pathVariant : Variants = {
+        show: {
+            opacity: 1,
+            // x: 0,
+            transition: {
+                staggerChildren: 0.2
+            }
+        },
+        hidden: {
+            opacity: 0,
+            // x: "-2rem"
+        }
+    }
+    const scopeVariant : Variants = {
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+            }
+        },
+        hidden: {
+            opacity: 0,
+            y: "-2rem"
+        }
+    }
+    const cardVariant : Variants = {
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                type: "spring",
+            }
+        },
+        hidden: {
+            opacity: 0,
+            x: "-2rem"
+        }
+    }
+
     return (
-        <div className={styles.Path}>
-            <div className="">
+        <motion.div variants={pathVariant} initial="hidden" whileInView="show" viewport={{ margin: "-10%" }}  className={styles.Path}>
+            <motion.div className="" variants={scopeVariant}>
                 <h3 className={styles.scope}>{props.scope}</h3>
-            </div>
-            <PathCard title={props.title} 
-                    companyName={props.companyName}
-                    role={props.role} 
-                    description={props.description} />
-        </div>
+            </motion.div>
+            <motion.div variants={cardVariant}>
+                <PathCard title={props.title} 
+                        companyName={props.companyName}
+                        role={props.role} 
+                        description={props.description} />
+            </motion.div>
+        </motion.div>
     )
 }
 
@@ -64,6 +107,8 @@ export default function Experience(){
             x: "-4rem"
         }
     }
+
+   
 
     return (
         <div className={styles.Experience} id="experiences">

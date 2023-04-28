@@ -60,12 +60,6 @@ function Path(props : any){
         <motion.div variants={pathVariant} initial="hidden" whileInView="show" viewport={{ margin: "-10%" }}  className={styles.Path}>
             <motion.div className="" variants={scopeVariant}>
                 <h3 className={styles.scope}> <br />
-                    {/* <svg height="auto" style={{
-                        display: "inline",
-                        width: "fit-content"
-                    }}> 
-                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
-                    </svg> */}
                 {props.scope}
                 </h3>
             </motion.div>
@@ -124,7 +118,7 @@ export default function Experience(){
     const scroll2 = useScroll();
 
     return (
-        <div className={styles.Experience}  id="experiences" onClick={()=>console.log("exp " + scroll2.scrollYProgress.current)}>
+        <div className={styles.Experience}  id="experiences" >
             <motion.div  variants={headerVariant} initial="hidden" whileInView="show">
                 <SectionHeader text={<span>My <span style={{ color: 'rgb(0, 255, 157)' }}>Career</span> Path & Experience</span>} />
             </motion.div>

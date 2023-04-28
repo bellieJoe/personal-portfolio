@@ -115,28 +115,8 @@
         color: white;
         width: fit-content;
         // animation: header_glitch .4s linear .4s infinite ;
-        margin: 0rem;
-        // &::before{
-        //     content: "";
-        //     background-color: none;
-        //     position: absolute;
-        //     top: 70%;
-        //     right: 40%;
-        //     width: 2%;
-        //     height: 5%;
-        //     mix-blend-mode: difference;
-        //     animation: glitch_before .2s ease-out .4s alternate infinite;
-        // }
-        // &::after{
-        //     content: "";
-        //     background-color: none;
-        //     position: absolute;
-        //     top: 70%;
-        //     right: 40%;
-        //     width: 2%;
-        //     height: 5%;
-        //     mix-blend-mode: difference;
-        //     animation: glitch_after .2s ease-out .4s alternate infinite;
-        // }
+        // margin: 0rem;
+        font-size: 3rem;
+        max-width: 500px;
     }
 }

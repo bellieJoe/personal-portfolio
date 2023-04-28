@@ -12,8 +12,19 @@
 .Path{
     font-family: $primary-font;
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
     align-items: center;
+    width: fit-content;
+    margin: 0rem auto;
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        .PathCard{
+            margin-bottom: 1rem;
+            margin-top: 0rem;
+        }
+    }
     .companyName, .role {
         font-family: $secondary-font;
     }
@@ -21,17 +32,31 @@
         margin-bottom: 0px;
     }
     .scope{
-        color: $primary;
-        font-weight: bold;
+        // color: $secondary;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        z-index: 1 !important;
+        
     }
 }
 .PathCard{
-    padding: 1rem;
+    padding: 2rem;
     margin: 2rem 0rem;
     font-family: $secondary-font;
-    background-image: linear-gradient(45deg, #383838, #4B473F);
+    background-image: linear-gradient(45deg, #282525, #000000);
     border-radius: .5rem;
-    box-shadow: -23px 30px 43px 0px rgba(0, 0, 0, 0.45), 50px -29px 43px 0px rgba(237, 237, 237, 0.02);
+    box-shadow: -100px 30px 43px 0px rgba(0, 0, 0, 0.45), 50px -29px 43px 0px rgba(237, 237, 237, 0.02);
     max-width: 700px;
+    .role{
+        font-weight: bolder;
+        color: $secondary;
+    }
+    .desc{
+        margin-top: 1rem;
+        // font-size: .9rem;
+        opacity: .8;
+        font-weight: lighter;
+        text-align: justify;
+    }
     // overflow-x: scroll;
 }

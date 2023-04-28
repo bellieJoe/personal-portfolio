@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import variables from '../../styles/variable.module.scss'
 import styles from "./Navbar.module.scss";
 import { useState } from 'react';
@@ -25,7 +25,7 @@ export default function Navbar(){
 
     return (
         <>
-            <div className={styles.navbar}>
+            <motion.div className={styles.navbar} initial={{y:"-5rem", opacity: 0}} animate={{y: 0, opacity: 1}} transition={{type: "spring", bounce: .2}}>
                 <div className={styles.navbarBrand}>
                     <h3>
                         {
@@ -35,7 +35,6 @@ export default function Navbar(){
                                         <motion.div whileHover={{ 
                                             rotateY: 90
                                          }}
-                                        //  transition={{ ease: 'linear' }}
                                         >
                                         {
                                             !isLinkVisible ? (<MenuIcon />) : (<ArrowBackIcon />)
@@ -59,7 +58,7 @@ export default function Navbar(){
                         <a href="#">Stacks</a>
                     </li> */}
                 </motion.ul>
-            </div>
+            </motion.div>
         </>
     )
 }

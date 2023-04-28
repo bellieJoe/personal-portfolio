@@ -1,11 +1,15 @@
 // @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
-$primary-font: "Orbitron";
-$secondary-font: "Titillium Web";
+$primary-font: 'Inter', sans-serif;
+$secondary-font: $primary-font;
 $sample-color : black;
 
 $primary: rgb(0, 255, 157);
-$secondary: rgb(255, 251, 0);
+.primary{
+    color: $primary ;
+}
+$secondary: #faf743;
+$tertiary: gray;
 $light: white;
 $dark: black;
 
@@ -31,8 +35,8 @@ $light-color: rgb(255, 255, 255);
 }
 
 @mixin section {
-    padding-top: 4rem ;
-    padding-bottom: 4rem ;
+    padding-top: 6rem ;
+    padding-bottom: 6rem ;
     // @media only screen and (max-width: 700px) {
     //     padding: 0rem 5rem ;
     // }

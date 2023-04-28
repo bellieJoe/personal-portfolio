@@ -3,18 +3,14 @@ import styles from "./Hero.module.scss";
 import {motion} from "framer-motion";
 
 export default function Hero(){
-    console.log(styles)
     return (
         <>
             <div className={styles.Hero} id="hero">
-                <div className="">
-                    {/* <Test /> */}
-                    <h1 >Hi Im Bellie Joe</h1>
-                    <h5>A Full Stack Developer</h5>
-                </div>
-                <div className="">
-                    
-                </div>
+                <motion.div whileInView={{ y: 0, opacity: 1}} initial={{y:'4rem', opacity: 0}} transition={{duration: .3, ease: "easeOut", delay: .4}}>
+                    <div className={styles.headText}>
+                        <h1>Building the future, one line of code at a time</h1>
+                    </div>
+                </motion.div>
             </div>
         </>
     )

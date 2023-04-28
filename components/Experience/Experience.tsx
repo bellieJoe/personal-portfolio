@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader"
 import styles from "./Experience.module.scss"
-import {motion, Variants} from "framer-motion";
+import {motion, useScroll, Variants} from "framer-motion";
 import path from "path";
+import zIndex from "@mui/material/styles/zIndex";
 
 function PathCard(props : any){
     return (
@@ -57,7 +59,15 @@ function Path(props : any){
     return (
         <motion.div variants={pathVariant} initial="hidden" whileInView="show" viewport={{ margin: "-10%" }}  className={styles.Path}>
             <motion.div className="" variants={scopeVariant}>
-                <h3 className={styles.scope}>{props.scope}</h3>
+                <h3 className={styles.scope}> <br />
+                    {/* <svg height="auto" style={{
+                        display: "inline",
+                        width: "fit-content"
+                    }}> 
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                    </svg> */}
+                {props.scope}
+                </h3>
             </motion.div>
             <motion.div variants={cardVariant}>
                 <PathCard title={props.title} 
@@ -108,24 +118,37 @@ export default function Experience(){
         }
     }
 
-   
+    // const scroll = useScroll({
+    //     target: expScrollRef
+    // });
+    const scroll2 = useScroll();
 
     return (
-        <div className={styles.Experience} id="experiences">
+        <div className={styles.Experience}  id="experiences" onClick={()=>console.log("exp " + scroll2.scrollYProgress.current)}>
             <motion.div  variants={headerVariant} initial="hidden" whileInView="show">
                 <SectionHeader text={<span>My <span style={{ color: 'rgb(0, 255, 157)' }}>Career</span> Path & Experience</span>} />
             </motion.div>
             
-            {
-                experiences.map(exp => (
-                    <Path key={exp.scope} scope={exp.scope}
-                    companyName={exp.companyName}
-                    role={exp.role}
-                    description={exp.description}
-                    title={exp.title}
-                    />
-                ))
-            }
+            {/* <svg height="1000" style={{
+                position: "absolute",
+                marginTop: "15rem",
+                zIndex: 0,
+            }}>
+                <polyline points="40,15 40,410 " style={{fill: "none", stroke: "gray", strokeWidth: 4, strokeLinecap:"round"}} />
+                <polyline points="40,473 40,900 " style={{fill: "none", stroke: "gray", strokeWidth: 4, strokeLinecap:"round"}} />
+            </svg> */}
+            <div className="">
+                {
+                    experiences.map((exp, i) => (
+                        <Path  key={exp.scope} scope={exp.scope}
+                        companyName={exp.companyName}
+                        role={exp.role}
+                        description={exp.description}
+                        title={exp.title}
+                        />
+                    ))
+                }
+            </div>
         </div>
     )
 }

@@ -5,29 +5,16 @@
     background-color: $background-color;
     position: sticky;
     top: 0;
-    z-index: 1;
-    @media only screen and (min-width: 700px) {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        ul{
-            position: inherit !important;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            display: grid;
-            padding: 0rem !important;
-            height: fit-content !important;
-            // width: inherit !important;
-            li{
-                text-align: center;
-            }
-        }
-    }
-    @media only screen and (min-width: 1000px) {
-    }
+    z-index: 3;
     .navbarBrand{
         background-color: $background-color;
         padding: .5rem;
         align-self: center;
+        width: 100vw;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        // z-index: 2;
         *{
             font-family: $primary-font;
             font-weight: 900;
@@ -35,6 +22,7 @@
             margin: 0rem;
         }
     }
+
     ul{
         padding: 4rem 2rem 0rem 2rem;
         margin: 1rem 0rem;
@@ -42,7 +30,7 @@
         position: fixed;
         top: 0px;
         left: 0px;
-        height: 100vh ;
+        height: 100% ;
         width: 80vw;
         background: $background-color;
         li{
@@ -58,5 +46,45 @@
                 }
             }
         }
+    }
+    .backdrop{
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: -2;
+        opacity: .8;
+    }
+    
+    @media only screen and (min-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+        display: grid !important;
+        align-items: center;
+        // background: green;
+        .navbarBrand{
+            position: initial;
+            width: initial;
+        }
+        .backdrop{
+            display: none !important;
+        }
+        ul{
+
+            position: inherit !important;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            display: grid;
+            padding: 0rem !important;
+            height: fit-content !important;
+            width: inherit !important;
+            &::before{
+                content: none;
+            }
+            li{
+                text-align: center;
+            }
+        }
+        
     }
 }

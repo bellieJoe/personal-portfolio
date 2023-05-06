@@ -1,0 +1,19 @@
+@import "../../styles/variable.module.scss";
+
+.Footer{
+    @include container;    
+    @include section;
+    background-color: $background-color;
+    h6{
+        color: white;
+        opacity: .7;
+        text-align: center;
+    }
+    .social_icon{
+        color: white;
+    }
+    .social_links{
+        width: fit-content;
+        margin: 0rem auto;
+    }
+}

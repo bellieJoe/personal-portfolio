@@ -6,7 +6,7 @@ import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import interestData from "./InterestData";
 
 export default function Interest(){
-    const contents = interestData;
+    const contents : any = interestData;
 
     const cardsVariant : Variants = {
         hidden : {
@@ -61,7 +61,7 @@ export default function Interest(){
                 </motion.div>
                 <motion.div className={styles.cards} variants={cardsVariant} initial="hidden" whileInView="show" viewport={{margin: "-150px"}}>
                 {
-                    contents.map(content => (
+                    contents.map((content : any) => (
                         <motion.div key={content.title}  variants={cardVariant} >
                             <motion.div className={styles.card}
                             >

@@ -64,6 +64,9 @@ export default function Navbar(){
                     <li>
                         <a href="#experiences">Experiences</a>
                     </li>
+                    <li>
+                        <a href="#devstacks">Dev. Stacks</a>
+                    </li>
                     {/* <li>
                         <a href="#">Stacks</a>
                     </li> */}

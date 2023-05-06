@@ -1,0 +1,6 @@
+@import "../../styles/variable.module.scss";
+.DevStacks{
+    @include container;    
+    @include section;
+    background-color: $background-color;
+}

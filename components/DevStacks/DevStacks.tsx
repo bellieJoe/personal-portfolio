@@ -21,6 +21,9 @@ export default function DevStacks () {
             <motion.div variants={headerVariant} initial="hidden" whileInView="show">
                 <SectionHeader text={<span >Development <span style={{ color: 'rgb(0, 255, 157)' }}>Stacks</span> & <span style={{ color: 'rgb(0, 255, 157)' }}>Tools</span></span>} />
             </motion.div>
+            <div className="">
+                
+            </div>
         </div>
     )
 }

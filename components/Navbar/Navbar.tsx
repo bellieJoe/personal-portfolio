@@ -21,6 +21,17 @@ export default function Navbar(){
                 } 
             } : {},
     }
+    const backdropvariant = {
+        initial: !isMedium ? {
+                display: isLinkVisible ? 'none' : 'block'
+            } : {},
+        animate: !isMedium ? {
+                display: isLinkVisible ? 'block' : 'none',
+                transition: {
+                    ease : 'linear'
+                } 
+            } : {},
+    }
 
     return (
         <>
@@ -57,6 +68,7 @@ export default function Navbar(){
                         <a href="#">Stacks</a>
                     </li> */}
                 </motion.ul>
+                <motion.div onClick={()=>setIsLinkVisible(false)} className={styles.backdrop} variants={backdropvariant}  initial="initial" animate="animate"></motion.div>
             </motion.div>
         </>
     )

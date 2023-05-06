@@ -2,10 +2,9 @@ import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import variables from '../../styles/variable.module.scss'
 import styles from "./Navbar.module.scss";
 import { useState } from 'react';
-import { Button, IconButton } from '@mui/material';
+import { Button, IconButton, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useMediaQuery } from "@mui/material"
 
 export default function Navbar(){
     const isMedium  = useMediaQuery('(min-width:700px)');

@@ -1,0 +1,16 @@
+@import "../../styles/variable.module.scss";
+.DevStacks{
+    @include container;    
+    @include section;
+    background-color: $background-color;
+    .logos{
+        *{
+            margin: .5rem;
+        }
+    }
+    .stack_title{
+        color: white;
+        margin-top: 1.5rem;
+        opacity: 85%;
+    }
+}

@@ -9,7 +9,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 export default function Navbar(){
     const isMedium  = useMediaQuery('(min-width:700px)');
     const [isLinkVisible, setIsLinkVisible] = useState(true);
-
     const linkVariant = {
         initial: !isMedium ? {
                 x: isLinkVisible ? 0 : '-100vw'
@@ -32,6 +31,7 @@ export default function Navbar(){
                 } 
             } : {},
     }
+
 
     return (
         <>
@@ -59,10 +59,13 @@ export default function Navbar(){
                 </div>
                 <motion.ul variants={linkVariant} initial="initial" animate="animate">
                     <li>
-                        <a href="#interest">Interest</a>
+                        <a href="#interest" onClick={()=>setIsLinkVisible(false)}>Interest</a>
                     </li>
                     <li>
-                        <a href="#experiences">Experiences</a>
+                        <a href="#experiences" onClick={()=>setIsLinkVisible(false)}>Experiences</a>
+                    </li>
+                    <li>
+                        <a href="#devstacks" onClick={()=>setIsLinkVisible(false)}>Dev. Stacks</a>
                     </li>
                     {/* <li>
                         <a href="#">Stacks</a>

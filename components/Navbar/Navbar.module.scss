@@ -41,6 +41,8 @@
                 color: $light-color;
                 text-decoration: none;
                 transition: .4s;
+                font-weight: bolder;
+                font-size: 1.5rem;
                 &:hover{
                     color: $primary;
                 }

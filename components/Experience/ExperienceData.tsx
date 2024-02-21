@@ -16,7 +16,7 @@ const experienceData = [
         title: '-dscrptn'
     },
     {
-        scope: '2022-Present',
+        scope: '2022-2023',
         companyName: 'Marinduque State College - ICTSC',
         role: 'Full Stack Developer',
         description: "After graduating from my alma mater, I was fortunate to land my first job as a Software Developer in the same institution. In this role, I was responsible for designing and developing Information Systems that were beneficial to the institution. It was also an excellent opportunity for me to apply the knowledge I had recently acquired in PHP and Laravel development. Additionally, it was my first time collaborating with other software developers working on similar systems, which helped me develop my teamwork and communication skills.",

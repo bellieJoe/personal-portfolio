@@ -75,7 +75,7 @@ export default function Interest(){
                     ))
                 }
                 </motion.div>
-                <motion.a variants={workslinkVariant} whileInView="show" initial="hidden" whileHover="focus"  className={styles.works} href="#">See all my Works <KeyboardReturnIcon/></motion.a>
+                {/* <motion.a variants={workslinkVariant} whileInView="show" initial="hidden" whileHover="focus"  className={styles.works} href="#">See all my Works <KeyboardReturnIcon/></motion.a> */}
             </div>
         </>
     )

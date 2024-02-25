@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { Button, IconButton, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Image from 'next/image';
+import logo from '../../assets/image/icons/android-chrome-192x192.png';
+
 
 export default function Navbar(){
     const isMedium  = useMediaQuery('(min-width:700px)');
@@ -31,11 +34,12 @@ export default function Navbar(){
                 } 
             } : {},
     }
+    const { scrollY } = useScroll()
 
 
     return (
         <>
-            <motion.div className={styles.navbar} initial={{y:"-5rem", opacity: 0}} animate={{y: 0, opacity: 1}} transition={{type: "spring", bounce: .2}}>
+            <motion.div className={styles.navbar} initial={{y:"-5rem", opacity: 0}} animate={{y: 0, opacity: 1}} transition={{type: "spring", bounce: .2}} >
                 <div className={styles.navbarBrand}>
                     <h3>
                         {
@@ -54,7 +58,7 @@ export default function Navbar(){
                                 </IconButton>
                             )
                         }
-                        <a href="#hero">BJ</a> 
+                        <a href="#hero"><Image src={logo} width={60} height={60} alt="Logo" quality={100} /></a> 
                     </h3>
                 </div>
                 <motion.ul variants={linkVariant} initial="initial" animate="animate">

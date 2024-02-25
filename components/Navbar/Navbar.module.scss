@@ -3,6 +3,7 @@
 .navbar{
     @include container;
     background-color: $background-color;
+    background-blend-mode: luminosity !important;
     position: sticky;
     top: 0;
     z-index: 3;
@@ -33,6 +34,7 @@
         height: 100% ;
         width: 80vw;
         background: $background-color;
+        
         li{
             list-style: none;
             margin: .5rem 0rem;
